@@ -1,0 +1,188 @@
+.nav{
+    background-color:#00548E;
+    padding:20px;
+    
+}
+
+.header{
+    border-bottom: 5px solid #ED1B2E;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow:#707070 
+}
+
+.footer{
+    background-color: #707070;
+    border-top:5px solid #ED1B2E;
+}
+
+.body{
+    background-color: white;
+    border-left: 2px solid #00548E;
+    width:100%;
+    
+}
+
+.header img{
+    width:225px;
+    height:150px;
+    border-width: 0px 70px 0px 0px ;
+    border-style: solid;
+    border-image: 
+    linear-gradient(
+      to right, 
+      white, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+}
+
+.body p, .body ol, .body li{
+    font: 16px/1 'Montserrat', sans-serif;
+    line-height: 1.75;
+    margin: 0 auto 2em;
+}
+
+.body li{
+    margin:3px 0 0 0;
+}
+
+.nav > .important-dates{
+    color:#bbb;
+    padding-top:30px;
+}
+
+.body >.body-content{
+    width: 90%;
+    margin:0 5% 0 5%;
+    
+}
+
+.body > .body-content > .theme{
+    display: flex;
+    align-items: center;
+}
+
+.body > .body-content > .theme > .theme-text{
+    width:auto;
+    padding-left:20px;
+    text-align:center;
+}
+
+.body > .body-content > .theme > .theme-img{
+    width:700px;
+    margin-bottom:20px;
+}
+
+.body > .body-content > .theme > .theme-img img{
+    width:100%;
+}
+
+.nav > .bulleted-list{
+    color:#BBB;
+    font: 16px/1 'Montserrat', sans-serif;
+}
+
+.nav li{
+    padding-bottom:10px;
+    line-height:110%;
+    list-style-type:none;
+}
+
+.nav ul{
+    padding:0;
+}
+
+.flex-officers-FLC img{
+    width: 100%;
+
+}
+
+.flex-officers-FLC{
+    display: flex;
+
+}
+.officer, .FLC{
+    width:50%;
+    padding:10px;
+}
+
+
+.resources{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+.questions{
+    text-align: center;
+}
+
+.questions-contacts{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.billing-questions, .aditional-questions{
+    width:45%;
+}
+
+.industry-partner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.industry-partner div{
+    padding: 10px;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.footer > .footer-wrapper{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin:0;
+
+}
+
+.Info-info, .Contact-info {
+    line-height: .5em;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    
+}
+.Info-info p, .Contact-info p{
+    padding:10px;
+    margin: 0;
+}
+
+.information h2, .Contact h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.information, .Contact{
+    width:45%
+}
+
+.footer h6{
+    text-align: center;
+}

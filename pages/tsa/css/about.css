@@ -1,0 +1,144 @@
+body{
+    background-color: #aaa;
+    display: grid;
+    grid-template-columns: 8% 1fr 1fr 1fr 8%;
+    grid-template-rows: auto 70px auto 45% 45% auto 100px;
+    grid-template-areas: 
+    "head head head head head"
+    ". . . . ."
+    ". s1 s1 s1 ."
+    ". s2 s7 s6 ."
+    ". s3 s5 s4 ."
+    ". s8 s9 s10 ."
+    "foot foot foot foot foot";
+    grid-gap: 30px;
+}
+
+#header{
+    grid-area: head;
+}
+
+section{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: white solid 2px;
+}
+
+#s1{
+    grid-area: s1;
+}
+
+#s2{
+    grid-area: s2;
+    background-image: url(../images/space-staction.png);
+    background-size: contain;
+}
+
+#s3{
+    grid-area: s3;
+    background-image: url(../images/horizontal-stars.jpg);
+}
+
+#s4{
+    grid-area: s4;
+    background-image: url(../images/earth-with-sun.jpg);
+}
+
+#s5{
+    grid-area: s5;
+    background-image: url(../images/familiarize.jpg);
+}
+
+#s6{
+    grid-area: s6;
+    background-image: url(../images/ship.png);
+    background-size: contain;
+}
+
+#s7{
+    grid-area: s7;
+    background-image: url(../images/stars-on-mountains.jpg);
+}
+
+
+#s2, #s3, #s4, #s5, #s6, #s7{
+    margin:30px;
+}
+
+
+
+#s8{
+    grid-area: s8;
+}
+
+#s9{
+    grid-area: s9;
+}
+
+#s10{
+    grid-area: s10;
+}
+
+
+
+#footer{
+    grid-area: foot;
+}
+
+
+
+
+.cost{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:0px;
+    width: 80%;
+}
+
+.cost h5{
+    border: none;
+}
+
+@media only screen and (max-width: 1563px){
+    body{
+    grid-template-rows: auto 70px auto 35% 35% auto 100px;
+    grid-template-areas: 
+    "head head head head head"
+    ". . . . ."
+    ". s1 s1 s1 ."
+    ". s2 s3 s4 ."
+    
+    ". s5 s6 s7 ."
+    ". s8 s9 s10 ."
+
+    "foot foot foot foot foot";
+    grid-gap: 40px;
+    }
+}
+
+@media (max-width: 1100px) {
+    body{
+        grid-template-columns: 1% 1fr 1fr 1fr 1%;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    body{
+        grid-template-rows: 40px 20px auto 300px auto auto auto 100px;
+        grid-template-areas: 
+        "head head head head head"
+        ". . . . ."
+        ". s1 s1 s1 ."
+        ". s2 s2 s2 ."
+        ". s8 s8 s8 ."
+        ". s9 s9 s9 ."
+        ". s10 s10 s10 ."
+        "foot foot foot foot foot";
+    }
+     #s3, #s4, #s5, #s6, #s7{
+    display: none;
+    }
+
+}

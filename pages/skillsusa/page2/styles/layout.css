@@ -1,0 +1,121 @@
+body{
+    display: grid;
+    grid-template-rows: 200px 500px 400px 400px auto 1fr;
+    grid-template-columns: 7% 1fr 1fr 1fr 7%;
+    grid-template-areas: 
+    " header header header header header "
+    " . img-d img img ."
+    ". vid vid vid-d ."
+    ". map-d map map ."
+    ". aud-d aud-d aud ."
+    "ft ft ft ft ft"
+    ;
+    grid-gap:25px;
+    padding: 0;
+    margin: 0;
+    background-image: url(../images/background/animation-blue-ocean-landscape-video-footage-089859057_prevstill.webp);
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#head-nav{
+    grid-area: header;
+    background-image: linear-gradient( #58A4E2 , #80D2F2 );
+}
+
+#nav{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+}
+
+body section{
+    border: 2px solid #D97184;
+}
+
+.section-text{
+    padding: 0 20px;
+    font-size: 1.2rem;
+}
+
+.section-text h2{
+    text-align: center;
+    font-family: 'Sigmar One', cursive;
+}
+
+#img-gallary{
+    grid-area: img;
+    background-color: #eee;
+}
+
+#img-text{
+    grid-area: img-d;
+    background-color: #eee;
+}
+
+#img-text h3{
+    text-align: center;
+    height: fit-content;
+    margin: auto;
+}
+
+#video{
+    grid-area: vid;
+    background-color: #eee;
+}
+
+#video-description{
+    grid-area: vid-d;
+    background-color: #eee;
+}
+
+#map{
+    grid-area: map;
+    background-color: #eee; 
+}
+
+#map-text{
+    grid-area: map-d;
+    background-color: #eee; 
+}
+
+.contact-wrapper p{
+    text-align: center;
+    margin: 0 10px 10px 30px;
+}
+
+.contact-wrapper h3{
+    margin:20px 2% 5px 2%;
+    padding: 0;
+}
+
+#audio{
+    grid-area: aud;
+    background-color: #eee;
+}
+
+#audio-text{
+    grid-area: aud-d;
+    background-color: #eee;
+}
+
+#footer{
+    grid-area: ft;
+    background-image: linear-gradient(  #80D2F2, #58A4E2);
+    border-top: 3px solid #C15879;
+}
+
+
+
+@media screen and (max-width:1200px){
+    body{
+        grid-template-rows: 200px 350px 350px 400px auto 1fr;
+    }
+
+    .section-text, .section-text h2{
+        font-size: 1rem;
+    }
+}

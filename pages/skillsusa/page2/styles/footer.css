@@ -1,0 +1,13 @@
+#footer {
+    background-color: #11122b;
+    color: #C15879;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -4px;
+    font-weight: 2;
+    text-align: center;
+
+}

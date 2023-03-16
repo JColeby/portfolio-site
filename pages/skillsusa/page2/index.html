@@ -1,0 +1,282 @@
+<!-- #D97184 pink
+#C15879 dark pink
+#58A4E2 dark blue
+#80D2F2 light blue
+#F2C53D yellow
+#A3C6A7 green  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/slides.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="stylesheet" href="styles/video.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <script src="https://kit.fontawesome.com/3e908ca9dd.js" crossorigin="anonymous"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Neuton&family=Sigmar+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="head-nav">
+        <header id="head">
+            <div class="logo">
+                <img src="images/sign.png" alt="pier sign">
+
+                <div class="header-title">
+                <h1>
+                    Pier 68
+                </h1>
+            </div>
+            </div>
+            
+            <div class="boat-img">
+                <img src="images/boat-icon.png" alt="boat icon">
+            </div>
+        </header>
+
+        <nav id="nav">
+            <div class="menu-item">
+                <ul>
+                    <li><a href="#" aria-haspopup="true">main</a>
+                        <ul class="dropdown">
+                          <li><a href="#img-gallary">Photo Gallery</a></li>
+                          <li><a href="#video">Video</a></li>
+                          <li><a href="#map">Map</a></li>
+                        </ul>
+                      </li>
+                </ul>  
+            </div>
+
+            <div class="menu-item">
+                <ul>
+                    <li><a href="#" aria-haspopup="true">about</a>
+                        <ul class="dropdown">
+                          <li><a href="#">Our Mission</a></li>
+                          <li><a href="#">How it Started</a></li>
+                          <li><a href="#">Locations</a></li>
+                        </ul>
+                      </li>
+                </ul>  
+            </div>
+       
+            <div class="menu-item">
+                <ul>
+                    <li><a href="#" aria-haspopup="true">pricing</a>
+                        <ul class="dropdown">
+                          <li><a href="#">Small Boats</a></li>
+                          <li><a href="#">Medium Boats</a></li>
+                          <li><a href="#">Large Boats</a></li>
+                        </ul>
+                      </li>
+                </ul>  
+            </div>
+        
+            <div class="menu-item">
+                <ul>
+                    <li><a href="#" aria-haspopup="true">contact</a>
+                        <ul class="dropdown">
+                          <li><a href="#">Email</a></li>
+                          <li><a href="#">Social Media</a></li>
+                          <li><a href="#">Phone</a></li>
+                        </ul>
+                      </li>
+                </ul>  
+            </div>
+        </nav>
+
+    </div>
+
+
+
+
+    <section id="img-gallary">
+        <!-- slideshow images from w3schools -->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+            <div class="numbertext">1 / 6</div>
+            <img src="images/slides/pier68-boats.jpg" >
+            </div>
+            
+            <div class="mySlides fade">
+            <div class="numbertext">2 / 6</div>
+            <img src="images/slides/Yamaha.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+            <div class="numbertext">3 / 6</div>
+            <img src="images/slides/pier68.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 6</div>
+                <img src="images/slides/pier68_building.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 6</div>
+                <img src="images/slides/sunset_fishing.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 6</div>
+                <img src="images/slides/boats.jpg" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+            <span class="dot" onclick="currentSlide(6)"></span> 
+        </div>
+            
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            }
+        </script>
+    </section>
+
+    <section id="img-text" class="section-text">
+        <h2>
+            Boat and Kayak Rentals!
+        </h2>
+        <p>
+            Pier 68 rents center consoles, pontoon, deck boats and kayaks in the middle keys (Islamorada to Marathon)
+        </p>
+        <p>
+            Call Pier 68 to reserve your center console fishing boat. We offer daily, multi-day, weekly and monthly rental rates. We also have fishing and snorkeling gear.
+        </p>
+        <h3>
+            <a href="#map">Contact Us!</a>
+        </h3>
+    </section>
+
+    <section id="video">
+        <video controls>
+            <source src="media/boatvideo.mp4" type="audio/wav">
+        </video>
+    </section>
+    
+    <section id="video-description" class="section-text">
+        <h2>
+            Boats equipped with: 
+        </h2>
+        <p>
+            GPS, Depth Finder/Fish Finder, VHF Radios, USCG Safety Equipment, Livewells, Dive Flag, Gaff, Coolers, Swim Platforms/Ladders, Outriggers offered on larger boats.
+        </p>
+    </section>
+
+    <section id="map">
+        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.16542366721!2d-80.81867568589183!3d24.824015852832844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d0cd4ddc0dfa57%3A0x78542be55784fc14!2sPier%2068%20Boat%20Rental!5e0!3m2!1sen!2sus!4v1675179540762!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section id="map-text" class="section-text">
+        <h2>
+            Contact Us!
+        </h2>
+        <div class="contact-wrapper">
+            <h3>
+            Address:
+            </h3>
+            <p>
+                68200 Overseas Hwy, Layton, FL 33001
+            </p>
+        </div>
+
+        <div class="contact-wrapper">
+            <h3>
+            Hours:
+            </h3>
+            <p>
+                XX:XX am - 5:00 pm
+            </p>
+        </div>
+
+        <div class="contact-wrapper">
+            <h3>
+            Phone:
+            </h3>
+            <p>
+                (305) 664-2238
+            </p>
+        </div>
+    </section>
+
+    <section id="audio">
+        <audio controls>
+            <source src="media/WaterLapsCalmBoat PE042301.wav" type="audio/wav">
+        </audio>
+    </section>
+
+    <section id="audio-text" class="section-text">
+        <h2>CANCELLATION POLICY</h2>
+        <p>You may change / cancel up to two weeks prior to the start of your rental; in extenuating circumstances, within the two weeks, we will do our best to re-rent the boat for you, if not you are responsible for all rental charges. There is no refund for any cancellation unless there is a named storm, i.e. tropical storm or hurricane. If there is a small craft advisory, it is up to the rental company to determine if there will be any refund.</p>
+    </section>
+
+
+    <footer id="footer">
+        <div class="copy">&copy; COPYRIGHT 2022 ALL RIGHTS RESERVED.</div>
+        <div class="footer-links">
+        <div class="links">
+        <span>Information</span>
+        <a href="#">main</a>
+        <a href="#">about</a>
+        <a href="#">pricing</a>
+        <a href="#">contact</a>
+        </div>
+        <div>
+        <span class="phone">305-664-2238</span>
+        <span class="hours"> Open ⋅ Closes 5 PM</span>
+        </div>
+        <div class="links">
+        <span>Social Links</span>
+        <a href="https://www.facebook.com/Pier-68-Boat-Rentals-152842394746141/?ref=page_internal”><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:jaydz@live.com"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+        <a href="images/mockup.png">Mockup</a>
+</body>
+</html>

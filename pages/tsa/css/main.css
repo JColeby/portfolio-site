@@ -1,0 +1,247 @@
+
+
+
+body{
+   
+    background-image: url(../images/warth-with-sun2.jpg);
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#header > .container{
+max-width: 100%;
+}
+
+header li{
+    margin:0px 20px;
+}
+
+.text-end{
+    display: flex;
+}
+
+header {
+    background-image: linear-gradient(110deg, #011640, #376FDE);
+}
+
+.sections{
+    background-color: #FFFFFFE5;
+}
+
+body section{
+    border-radius: 5px;
+    box-shadow: 0 0 15px 0 #000000;
+}
+
+#header{
+    width:100%;
+    border-bottom: 1px solid white;
+    position: fixed;
+    box-shadow: 0 0 20px 0 #000000;
+    z-index: 2;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Russo One', sans-serif;
+    
+}
+
+h1, h2, h3, h4, h5 {
+    border-image-source: linear-gradient(110deg, #01163F, #376FDE);
+    border-image-slice: 1;
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+    color: #000077;
+}
+
+
+
+/** nav styles **/
+
+#nav{
+    justify-content: space-between;
+}
+
+
+#header > .container > .header-width > .text-end > .btn{
+    margin: 0 5px;
+    
+}
+
+#nav ul{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    width:auto;
+}
+
+.nav-link{
+    transition: .25s;
+    color:#fff;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: 'Russo One', sans-serif;
+}
+
+@media (max-width: 1400px) {
+    .form-control{
+        display: none;
+    }
+   
+}
+
+
+
+.active-link{
+    color: #c0c0c0;
+}
+
+.nav-link:hover{
+    color: #fff !important;
+    font-size: 1.05em;
+}
+
+.btn-warning a{
+    color:#212529;
+    padding: 6px 12px;
+    
+}
+
+.btn{
+    padding: none !important;
+}
+
+.btn-outline-light a{
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 6px 12px;
+}
+
+
+.btn-outline-light a:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+.btn-warning{
+    border: 2px solid #999;
+}
+
+
+/** text sections **/
+
+.s-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin:40px;
+}
+
+.s-text h2{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.s-text p{
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/** footer **/
+
+#footer{
+    background-image: linear-gradient(to top,#011640, #376FDE);
+
+    border-top: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    color: #ddd;
+    box-shadow: 0 0 20px 0 #000000;
+}
+
+#footer div{
+    width: 30%;
+}
+
+#footer h6{
+    color: #eee;
+}
+
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+#footer > .social-media div i{
+    color: #c0c0c0;
+    font-size: 1.5em;
+    width:auto;
+    transition: .1s;
+}
+
+#footer > .social-media div i:hover{
+    color: #eee;
+    font-size: 1.6em;
+    width:auto;
+}
+
+#footer > .social-media div{
+    width: auto;
+    margin: 0 20px;
+}
+
+
+.worklog a{
+    color: #eee;
+}
+
+
+
+@media (max-width: 1235px) {
+    .container> .header-width> .text-end{
+        display: none;
+    }
+    #logo img{
+        display: none;
+    }
+
+    #nav{
+        justify-content: center;
+    }
+
+
+
+
+    .s-text p{
+        font-size: 1em;
+    }
+
+    .s-text{
+        margin: 20px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .nav-link{
+        font-size: .7em;
+        padding: .05rem;
+    }
+
+    .nav-link:hover{
+        color: #eee;
+        font-size: .75em;
+    }
+}
+
+

@@ -1,0 +1,98 @@
+#homepage {
+    background-color: beige;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 
+    220px
+    1fr
+    ;
+    grid-template-rows:
+    155px
+    1fr
+    auto
+    ;
+    grid-template-areas:
+    "header header"
+    "nav body"
+    "footer footer"
+    ;
+}
+
+.header {
+    grid-area: header;
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/Banner-img.png")
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.id-dates {
+    font-size: .8em;
+}
+
+/* 3x3 grid images */
+.body {
+    grid-area: body;
+}
+
+.resources-img {
+    display: grid;
+    grid-template-columns:
+    200px
+    200px
+    200px
+    ;
+    grid-template-rows:
+    200px
+    200px
+    200px
+    ;
+    grid-gap: 2px;
+    grid-template-areas:
+    'pic1 pic2 pic3'
+    'pic4 pic5 pic6'
+    'pic7 pic8 pic9'
+    ;
+}
+
+.image1 img {
+    grid-area: pic1;
+    width: 200px;
+}
+.image2 img {
+    grid-area: pic2;
+    height: 200px;
+}
+.image3 img {
+    grid-area: pic3;
+    height: 200px;
+}
+.image4 img {
+    grid-area: pic4;
+    height: 200px;
+}
+.image5 img {
+    grid-area: pic5;
+    height: 200px;
+}
+.image6 img {
+    grid-area: pic6;
+    height: 200px;
+}
+.image7 img {
+    grid-area: pic7;
+    height: 200px;
+}
+.image8 img {
+    grid-area: pic8;
+    height: 200px;
+}
+.image9 img {
+    grid-area: pic9;
+    height: 200px;
+}
+

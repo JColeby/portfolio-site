@@ -1,0 +1,397 @@
+
+
+
+
+/* nav styles*/
+
+
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+
+ link to origional menu - https://codepen.io/erikterwan/pen/EVzeRP
+ */
+
+
+ #menuToggle
+ {
+   display: block;
+   position: relative;
+   top: 50px;
+   left: 50px;
+   width:100px;
+   margin-right:10px;
+   
+   z-index: 1;
+   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+
+ #menuToggle a
+ {
+   text-decoration: none;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: tomato;
+ }
+ 
+ nav{
+    width:300px;
+    height:auto;
+ }
+ #menuToggle input
+ {
+   display: block;
+   width: 100px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   margin-left: -10px;
+   margin-top: 0;
+
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /*
+  * Just a quick hamburger
+  */
+ #menuToggle span
+ {
+   display: block;
+   width: 200px;
+   height: 32px;
+   margin-bottom: 5px;
+   position: relative;
+   margin-left: -20px;
+   margin-top: -15px;
+   font-family: "Avenir Next", "Avenir", sans-serif;
+   font-size: 22px;
+   padding-bottom: 20px;
+
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+
+  #menuToggle input:checked{
+    position: fixed;
+    margin:0;
+    width:calc(100vw - 250px);
+    height: 100vh;
+    margin-left: 250px;
+  }
+
+ 
+ #menu
+ {
+   position: fixed;
+   width: 200px;
+   height:100svh ;
+   margin: -385px 0 0 -50px;
+   padding: 25px;
+   
+
+   
+   background: #e4e4e4;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /*
+  * And let's slide it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+/* rest of the layout */
+
+body{
+    padding: 0;
+    margin: 0;
+  
+    background-image: url(../images/backgrounds/utah-landscape.jpg);
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+
+#body-home{
+    display: grid;
+    grid-template-columns:250px 7%  1fr 1fr 1fr 7%;
+    grid-template-rows: 30px auto auto auto auto;
+    grid-template-areas: 
+    "head . . . . ."
+    "head . s1 s1 s1 ."
+    "head . s4 s2 s2 ."
+    "head . s3 s3 s3 ."
+    "head foot foot foot foot foot"
+    ;
+}
+
+
+
+
+.section{
+    background-color: #ffffffff;
+
+    margin:10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    border-radius: 2px;
+}
+
+#header{
+    grid-area: head;
+    background-color: #fff;
+    margin-bottom: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+#nav{
+    grid-area: nav;
+    background-color: #ddd;
+    margin-bottom: 5px;
+}
+
+
+#section-1{
+    grid-area: s1;
+}
+
+#section-2{
+    grid-area: s2;
+}
+
+#section-3{
+    grid-area: s3;
+}
+
+#section-4{
+    grid-area: s4;
+    
+}
+
+#body-home > #section-4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section-5{
+    grid-area: s5;
+    display: none;
+}
+
+#section-6{
+    grid-area: s6;
+    display: none;
+}
+
+#body-home > #section-1 > .page-head{
+    text-align: center;
+}
+
+
+.header-title{
+    padding:5px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -5px;
+}
+
+.header-title div{
+    padding:5px;
+}
+
+
+.logo-header{
+    height:100px;
+    width:200px;
+    margin: 5px 25px;
+}
+
+#nav{
+    margin-top: -10px;
+}
+
+#section-4 > .img-gallery{
+    display: grid;
+    grid-template-columns: 210px 210px 210px 210px;
+    grid-template-rows: 200px 200px 200px 200px ;
+    grid-template-areas: 
+    "img1 img2 img3 img3"
+    "img1 img5 img5 img6"
+    "img7 img4 img8 img6"
+    "img9 img9 img8 img10"
+    ;
+    grid-gap:10px;
+    margin: 10px;
+}
+
+.header-wrapper{
+    position: fixed;
+    width:250px;
+    height:100vh;
+    z-index: 1;
+    margin-bottom: 5px;
+    background-color: #eee;
+}
+
+.logo-wrapper{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    z-index: 1;
+    background-color: #fff;
+}
+
+
+/*footer*/
+
+
+#footer{
+    grid-area: foot;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    z-index: -1;
+    margin-top: 30px;
+    padding:20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#footer h2{
+    margin:0px 5px 0px 0px;
+}
+
+.social-media-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:400px;
+    min-width: 400px;
+}
+
+.media-footer-icons i{
+    font-size: 1.5em;
+    transition: .3s;
+    color: #343434;
+}
+
+.copyright{
+    width:auto;
+}
+
+
+/*map and brochure styles */
+
+#body-map{
+    display: grid;
+    grid-template-columns:250px 7%  1fr 1fr 1fr 7%;
+    grid-template-rows: 30px auto auto auto auto;
+    grid-template-areas: 
+    "head . . . . ."
+    "head . s1 s1 s1 ."
+    "head . s4 s2 s2 ."
+    "head . s3 s3 s3 ."
+    "head foot foot foot foot foot"
+    ;
+}
+
+.main-map iframe{
+    object-fit: cover;
+    width:100%;
+    height: 400px;
+}
+
+.main-map{
+    margin: 0;
+    padding:0;
+    object-fit: cover;
+}
+
+.map-form{
+    padding:20px 40px 40px 40px;
+}
+
+.map-form input, .map-form select{
+    margin-bottom:10px
+}
+
+#body-map > #section-1 {
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 1800px) {
+    .body-home{
+    grid-template-columns:250px 7%  1fr 1fr 1fr 7%;
+    grid-template-rows: 30px auto auto auto auto;
+    grid-template-areas: 
+    "head . . . . ."
+    "head . s1 s1 s1 ."
+    "head . s4 s4 s4 ."
+    "head . s3 s3 s3 ."
+    "head foot foot foot foot foot"
+
+    }
+}

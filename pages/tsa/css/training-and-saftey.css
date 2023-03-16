@@ -1,0 +1,99 @@
+body{
+    background-color: #aaa;
+    display: grid;
+    grid-template-columns: 8% 1fr 1fr 1fr 8%;
+    grid-template-rows: auto 70px 600px 600px 600px 600px 100px;
+    grid-template-areas: 
+    "head head head head head"
+    ". . . . ."
+    ". s1 s1 s2 ."
+    ". s3 s8 s8 ."
+    ". s4 s4 s5 ."
+    ". s7 s6 s6 ."
+    "foot foot foot foot foot";
+    grid-gap:30px;
+}
+
+
+#header{
+    grid-area: head;
+}
+
+#s1{
+    grid-area: s1;
+}
+
+#s2{
+    grid-area: s2;
+}
+
+#s3{
+    grid-area: s3;
+}
+
+#s4{
+    grid-area: s4;
+}
+
+#s5{
+    grid-area: s5;
+}
+
+#s6{
+    grid-area: s6;
+}
+
+#s7{
+    grid-area: s7;
+}
+
+#s8{
+    grid-area: s8;
+}
+
+#footer{
+    grid-area: foot;
+}
+
+
+
+/** images **/
+
+
+.sections img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid white;
+    height: 600px;
+    filter: brightness(100%);
+}
+
+
+
+
+@media (max-width: 1100px) {
+    body{
+        grid-template-columns: 1% 1fr 1fr 1fr 1%;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    body{
+    grid-template-rows: auto 70px auto auto auto auto 100px;
+    grid-template-areas: 
+    "head head head head head"
+    ". . . . ."
+    ". s1 s1 s1 ."
+    ". s8 s8 s8 ."
+    ". s4 s4 s4 ."
+    ". s6 s6 s6 ."
+    "foot foot foot foot foot"; 
+    }
+
+    #s2, #s3, #s5, #s7{
+        display: none;
+    }
+    
+}

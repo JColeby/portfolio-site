@@ -1,0 +1,51 @@
+h2{
+    margin-top: 25px;
+    text-align: center;
+    text-justify: center;
+    font-size: 3em;
+}
+
+
+.information{
+    font-size: 1.5em;
+    text-align: center;
+    opacity: 1.0;
+    
+}
+
+.sections{
+    
+    background-color: #FFFFFFE5;
+    
+    overflow: hidden;
+}
+
+picture > img{
+    height: 450px;
+    transform: rotate(30deg);
+}
+
+body > section > .otherPicture > img{
+    
+    height: 150px;
+    transform: translateX(85px) rotate(-60deg);
+    
+    
+    
+}
+
+.sections > .s-text p{
+    width: 95%;
+}
+
+.pictures{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h3{
+    text-align:right;
+}

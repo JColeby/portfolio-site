@@ -1,0 +1,134 @@
+
+a {
+    text-decoration: none;
+  }
+  
+header{
+    height:135px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    margin: 0;
+    padding: 40px;
+    width:250px;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+header .logo img{
+    height: 115px;
+    width:175px;
+    background-color: #e7b315;
+    margin: 0;
+    text-align: right;
+}
+
+header .logo{
+  height: 115px;
+    width: auto;
+    margin: 10px 10px 10px 5%;
+    display: flex;
+}
+
+header .boat-img img{
+  height: 115px;
+  margin: 5px 0 5px 5px;
+}
+
+nav {
+    font-family: monospace;
+    width: 100%;
+    position: relative;
+    height:65px;
+    background: #f2c53d;
+    border-bottom: 2px solid #C15879;
+    border-top: 2px solid #C15879;
+    
+  }
+
+
+#nav > .menu-item{
+    width: 20%;
+    text-align: center;
+    display: flex;
+    background-color: white;
+}
+  
+  #nav ul {
+
+    list-style: none;
+    margin: auto;
+    padding-left: 0;
+    padding: auto;
+  }
+  
+  #nav .menu-item {
+    color: #fff;
+    background: #f2c53d;
+    display: block;
+    float: left;
+    padding:  0;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    font-weight: 900;
+  }
+
+  #nav >.menu-item ul li{
+    padding:25px 0;
+    font-weight: 1200;
+  }
+    
+  #nav li a {
+    color: #fff;
+  }
+  
+  #nav .menu-item:hover,
+  #nav .menu-item:focus-within 
+  #nav > .menu-item ul li ul:hover,
+  #nav > .menu-item  ul li ul:focus-within {
+    background: #f3be1d;
+    cursor: pointer;
+  }
+  
+  #nav li:focus-within a {
+    outline: none;
+  }
+  
+  #nav ul li ul {
+    background: #e7b315;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    padding:auto 0;
+    width: 100%;
+    margin-top:21px;
+    z-index: 2;
+  }
+  
+  #nav ul li:hover > ul,
+  #nav ul li:focus-within > ul,
+  #nav ul li ul:hover,
+  #nav ul li ul:focus {
+     visibility: visible;
+     opacity: 1;
+  }
+  
+  #nav ul li ul li {
+    clear: both;
+    width: 100%;
+  }
+
+  #nav ul li ul li:hover {
+    background: #eeb712;
+  }

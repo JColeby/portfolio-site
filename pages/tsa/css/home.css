@@ -1,0 +1,261 @@
+body{
+    background-color: #aaa;
+    display: grid;
+    grid-template-columns: 8% 1fr 1fr 1fr 8%;
+    grid-template-rows: auto 70px 350px 500px auto auto 350px 600px 100px;
+    grid-template-areas: 
+    "head head head head head"
+    ". . . . ."
+    ". s1 s1 s1 ."
+    ". s2 s3 s3 ."
+    ". . . . . "
+    ". s4 s4 s4 ."
+    ". s8 s9 s10 ."
+    ". s7 s5 s6 ."
+    "foot foot foot foot foot";
+    grid-gap:30px;
+}
+
+
+
+#header{
+    grid-area: head;
+}
+
+#s1{
+    grid-area: s1;
+}
+
+#s2{
+    grid-area: s2;
+}
+
+#s3{
+    grid-area: s3;
+}
+
+#s4{
+    grid-area: s4;
+    padding: 25px;
+}
+
+#s5{
+    grid-area: s5;
+}
+
+#s6{
+    grid-area: s6;
+}
+
+#s7{
+    grid-area: s7;
+}
+
+#s8{
+    grid-area: s8;
+}
+
+#s9{
+    grid-area: s9;
+}
+
+#s10{
+    grid-area: s10;
+}
+
+#footer{
+    grid-area: foot;
+}
+
+
+/** images **/
+
+#sm-banner{
+    display: none;
+}
+
+#bg-banner{
+    display: block;
+}
+
+.sections img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+#s7 img, #s6 img{
+    height:600px;
+}
+
+#s1 img{
+    height: 350px;
+}
+
+#s3 video{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+
+
+/** services **/
+
+.services-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px;
+    width: 80%;
+}
+
+#s8, #s9, #s10{
+    margin:10%;
+    transition: .5s;
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#s8:hover{
+    margin:9%;
+}
+#s9:hover{
+    margin:9%;
+
+}
+#s10:hover{
+    margin:9%;
+
+}
+
+#s4{
+    margin: 0 calc(50% - 300px) -30px calc(50% - 300px);
+    text-align: center;
+}
+
+.services{
+    width: inherit;
+    padding:10px 25px;
+    text-align: center;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.services h4{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.services p{
+    font-size: 1.3em;
+}
+
+.services-mars p span{
+    font-weight: 500;
+}
+
+.services a:hover, #s4 a:hover{
+    text-decoration: none;
+}
+
+
+@media (max-width: 1500px) {
+    .services-bar div{
+        height: auto;
+    }
+
+    body{
+        background-color: #aaa;
+        display: grid;
+        grid-template-columns: 8% 1fr 1fr 1fr 8%;
+        grid-template-rows: auto 70px 150px auto  500px  auto auto auto auto auto 100px;
+        grid-template-areas: 
+        "head head head head head"
+        ". . . . ."
+        ". s1 s1 s1 ."
+        ". s2 s2 s2 ."
+        ". s3 s3 s3 ."
+        
+        ". s4 s4 s4 ."
+        ". s8 s8 s8 ."
+        ". s9 s9 s9 ."
+        ". s10 s10 s10 ."
+        ". s5 s5 s5 ."
+        "foot foot foot foot foot";
+        grid-gap:30px;
+    }
+
+
+    #s4{
+        margin: 30px 0 10px 0;
+    }
+
+    #s8, #s9, #s10{
+        margin:0 5%;
+    }
+
+    #s8:hover{
+        margin:0 5%;
+    }
+    #s9:hover{
+        margin:0 5%;
+    
+    }
+    #s10:hover{
+        margin:0 5% 30px 5%;
+    
+    }
+
+    #s10{
+        margin-bottom: 30px;
+    }
+
+    #s6, #s7{
+        display: none;
+    }
+
+    #s1 img{
+        height: 150px;
+    }
+
+}
+
+
+@media (max-width: 1100px) {
+    body{
+        grid-template-columns: 1% 1fr 1fr 1fr 1%;
+    }
+}
+
+
+@media (max-width: 900px) {
+    body{
+      grid-template-rows: auto 70px 150px auto 300px auto auto auto auto auto 100px;
+
+    }
+
+    #s3 video{
+        height:300px;
+    }
+}
+
+
+
+@media (max-width: 600px){
+    #sm-banner{
+        display: block;
+    }
+    #bg-banner{
+        display: none;
+    }
+
+}
